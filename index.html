@@ -16,11 +16,25 @@
         html, body {
             height: 100%;
         }
+
+        body::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-image: url(bg.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            z-index: -1;
+            filter: brightness(30%);
+        }
     </style>
 
     <script src="main.js" defer></script>
 </head>
 <body>
-    <audio src="bg.mp3" autoplay hidden></audio>
+    <audio src="bg.mp3" autoplay loop hidden></audio>
 </body>
 </html>

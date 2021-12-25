@@ -79,8 +79,6 @@ class Main {
         this.vw = this.canvas.width = window.innerWidth;
         this.vh = this.canvas.height = window.innerHeight;
 
-        this.canvas.style.backgroundColor = '#000';
-
         document.body.appendChild(this.canvas);
     }
 
