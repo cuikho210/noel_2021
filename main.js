@@ -71,6 +71,7 @@ class Main {
 
         this.createCanvas();
         this.createDots();
+        this.playBgMusic();
         this.updateMousePos();
         this.update();
 
@@ -93,6 +94,12 @@ class Main {
                 this.dots.push(new Dot(this, i));
             }, i * 10)
         }
+    }
+
+    playBgMusic () {
+        let music = document.getElementById('music');
+        
+        window.addEventListener('mousemove', () => music.play());
     }
 
     updateMousePos () {
