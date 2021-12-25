@@ -9,13 +9,14 @@ class Dot {
         this.y = 0;
         this.h = 0;
         this.g = 0;
+        this.opacityFadeSpeed = 0.04;
         this.opacity = 1.0;
         this.gravity = this.main.gravity;
     }
 
     update () {
         // Update opacity
-        this.opacity -= 0.03;
+        this.opacity -= this.opacityFadeSpeed;
         if (this.opacity <= 0) this.reset();
 
         // Update Position
@@ -44,6 +45,10 @@ class Dot {
         this.mouseY = this.main.mouseY;
         this.opacity = 1.0;
         this.gravity = this.main.gravity;
+
+        // Random
+        this.rad = Math.round(Math.random() * 360) * Math.PI / 180;
+        this.opacityFadeSpeed = Math.random() * 0.5 + 0.025;
     }
 }
 
