@@ -92,7 +92,7 @@ class Main {
     }
 
     createDots () {
-        for (let i = 0; i < 1440; i++) {
+        for (let i = 0; i < 1000; i++) {
             this.dots.push(new Dot(this, i));
         }
     }
@@ -100,7 +100,7 @@ class Main {
     playBgMusic () {
         let music = document.getElementById('music');
         
-        window.addEventListener('mousemove', () => music.play());
+        window.addEventListener('mousedown', () => music.play());
     }
 
     updateMousePos () {
