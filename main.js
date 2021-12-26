@@ -27,7 +27,7 @@ class Dot {
 
         this.h += this.main.speed;
         this.g += this.gravity;
-        this.gravity += this.gravity / 5;
+        this.gravity += this.gravity / 4;
 
         // Draw
         this.main.ctx.beginPath();
@@ -47,8 +47,7 @@ class Dot {
         this.gravity = this.main.gravity;
 
         // Random
-        this.rad = Math.round(Math.random() * 360) * Math.PI / 180;
-        this.opacityFadeSpeed = Math.random() * 0.5 + 0.025;
+        this.opacityFadeSpeed = Math.random() * 1 + 0.03;
     }
 }
 
