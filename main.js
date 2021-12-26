@@ -27,7 +27,7 @@ class Dot {
 
         this.h += this.main.speed;
         this.g += this.gravity;
-        this.gravity += this.gravity / 4;
+        this.gravity += this.gravity / 10;
 
         // Draw
         this.main.ctx.beginPath();
@@ -47,7 +47,7 @@ class Dot {
         this.gravity = this.main.gravity;
 
         // Random
-        this.opacityFadeSpeed = Math.random() * 1 + 0.03;
+        this.opacityFadeSpeed = Math.random() * 1 + 0.015;
     }
 }
 
@@ -62,9 +62,9 @@ class Main {
         this.mouseX = 0;
         this.mouseY = 0;
 
-        this.gravity = .25;
+        this.gravity = .1;
         this.hue = 0;
-        this.speed = 7;
+        this.speed = 3;
 
         this.dots = [];
 
@@ -91,7 +91,7 @@ class Main {
     }
 
     createDots () {
-        for (let i = 0; i < 1080; i++) {
+        for (let i = 0; i < (360 * 5); i++) {
             this.dots.push(new Dot(this, i));
         }
     }
