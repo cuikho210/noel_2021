@@ -91,7 +91,7 @@ class Main {
     }
 
     createDots () {
-        for (let i = 0; i < 1000; i++) {
+        for (let i = 0; i < 1080; i++) {
             this.dots.push(new Dot(this, i));
         }
     }
