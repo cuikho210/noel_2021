@@ -121,7 +121,7 @@ class Main {
         }
 
         // Update hue
-        this.hue ++;
+        this.hue += 2;
         if (this.hue > 360) this.hue = 0;
 
         // Loop
