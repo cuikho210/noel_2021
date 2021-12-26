@@ -85,14 +85,15 @@ class Main {
         this.vw = this.canvas.width = window.innerWidth;
         this.vh = this.canvas.height = window.innerHeight;
 
+        this.mouseX = this.vw / 2;
+        this.mouseY = this.vh / 2;
+
         document.body.appendChild(this.canvas);
     }
 
     createDots () {
-        for (let i = 0; i < 720; i++) {
-            setTimeout(() => {
-                this.dots.push(new Dot(this, i));
-            }, i * 10)
+        for (let i = 0; i < 1440; i++) {
+            this.dots.push(new Dot(this, i));
         }
     }
 
